@@ -33,7 +33,7 @@ has_cr_card = st.selectbox('Has Credit Card', [0,1])
 is_active_member = st.selectbox('Is Active Member', [0,1])
 
 # Prepare Input data
-input_data = pd.Dataframe({
+input_data = pd.DataFrame({
     'Gender':gender,
     'Age':age,
     'Balance':balance,
