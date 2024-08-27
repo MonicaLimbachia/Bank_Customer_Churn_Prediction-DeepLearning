@@ -46,11 +46,12 @@ input_data = pd.DataFrame({
 },index=[0])
 
 # One-hot encode "Geography"
-geo_encoded = ohe.transform([[geography]]).toarray()
+geo_encoded = ohe.transform([[geography]])
 geo_encoded_df = pd.DataFrame(geo_encoded,columns=ohe.get_feature_names_out(['Geography']))
 
+
+
 input_data = pd.concat([input_data.reset_index(drop=True), geo_encoded_df],axis=1)
-input_data.drop('Geography',axis=1,inplace=True)
 
 input_data['Gender'] = label_encoder.transform(input_data['Gender'])
 
