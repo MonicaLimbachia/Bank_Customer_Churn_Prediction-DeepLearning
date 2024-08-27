@@ -33,17 +33,18 @@ has_cr_card = st.selectbox('Has Credit Card', [0,1])
 is_active_member = st.selectbox('Is Active Member', [0,1])
 
 # Prepare Input data
+# Prepare Input data
 input_data = pd.DataFrame({
-    'Gender':gender,
-    'Age':age,
-    'Balance':balance,
-    'Credit Score':credit_score,
-    'Estimated Salary': estimated_salary,
-    'Tenure':tenure,
-    'Number of Products':num_of_products,
-    'Has Credit Card':has_cr_card,
-    'Is Active Member':is_active_member
-},index=[0])
+    'Gender': gender,
+    'Age': age,
+    'Balance': balance,
+    'CreditScore': credit_score,
+    'EstimatedSalary': estimated_salary,
+    'Tenure': tenure,
+    'NumOfProducts': num_of_products,
+    'HasCrCard': has_cr_card,
+    'IsActiveMember': is_active_member
+}, index=[0])
 
 # One-hot encode "Geography"
 geo_encoded = ohe.transform([[geography]])
