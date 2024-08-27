@@ -43,7 +43,7 @@ input_data = pd.DataFrame({
     'Number of Products':num_of_products,
     'Has Credit Card':has_cr_card,
     'Is Active Member':is_active_member
-})
+},index=[0])
 
 # One-hot encode "Geography"
 geo_encoded = ohe.transform([[geography]]).toarray()
