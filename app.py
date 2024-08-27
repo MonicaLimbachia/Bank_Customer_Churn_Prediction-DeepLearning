@@ -35,15 +35,16 @@ is_active_member = st.selectbox('Is Active Member', [0,1])
 # Prepare Input data
 # Prepare Input data
 input_data = pd.DataFrame({
+    'CreditScore': credit_score,
     'Gender': gender,
     'Age': age,
-    'Balance': balance,
-    'CreditScore': credit_score,
-    'EstimatedSalary': estimated_salary,
     'Tenure': tenure,
+    'Balance': balance,
     'NumOfProducts': num_of_products,
+    'CreditScore': credit_score,
     'HasCrCard': has_cr_card,
-    'IsActiveMember': is_active_member
+    'IsActiveMember': is_active_member,
+    'EstimatedSalary': estimated_salary,   
 }, index=[0])
 
 # One-hot encode "Geography"
