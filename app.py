@@ -64,7 +64,7 @@ input_data_scaled = scaler.transform(input_data)
 prediction = model.predict(input_data_scaled)
 prediction_probability = prediction[0][0]
 
-st.write(f'Churn Probsbility:{prediction_probability:.2f}')
+st.write(f'Churn Probability:{prediction_probability:.2f}')
 
 if prediction_probability > 0.5:
     st.write('Customer is more likely to leave the bank.')
